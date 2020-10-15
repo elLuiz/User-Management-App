@@ -10,16 +10,6 @@ routes.post('/user/', userController.insertUser);
 routes.put('/user/:id', userController.changeUserPassword);
 routes.delete('/user/:id', userController.deleteUser);
 routes.get('/checkCredentials', Auth, (req, res)=>{
-    console.log(req.cookies);
-    res.status(200).json({mess: 'Connected'});
-    // const token = 
-    // req.body.token ||
-    // req.query.token ||
-    // req.headers['x-access-token'] ||
-    // req.cookies.token;
-
-    // console.log('Cookies: ' + token)
-    
-    // return res.status(200).send('OK')
+    res.status(200).json({message: 'Connected'});
 })
 module.exports = routes
