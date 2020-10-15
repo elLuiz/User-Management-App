@@ -1,0 +1,19 @@
+@include border.define-gradient-border(input-group-button, $radius: 10px, $width: 1px);
+
+.input-group-button{
+    margin-top: 2rem;
+    width: 60vw;
+    height: 3rem;
+    font: 700 1rem Archivo;
+    color: $color-text-action-primary;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        transform: scale(0.98);
+        border-width: 2px;
+    }
+}

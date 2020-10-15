@@ -1,0 +1,15 @@
+@import '../../variables';
+
+.app-header{
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    width: 100vw;
+    background: $background-gradient;
+    color: $color-text-primary;
+    border-radius: 0 0 .8rem .8rem;
+    &:hover{
+        background: linear-gradient(90deg, #00B4DB 2%, rgba(0, 131, 176, 0.97) 100%);
+        transition: background 2s ease-in;
+    }
+}

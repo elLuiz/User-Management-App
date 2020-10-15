@@ -1,0 +1,46 @@
+@import '../../variables';
+
+@mixin defineMessageType($className, $color){
+    .#{$className}{
+        font: 700 1rem Archivo;
+        color: $color;
+        &:not(p){
+            box-shadow: 0px 2px 2px  1px transparentize($color, $amount: 0.4%) ;
+        }
+    
+    }
+}
+
+.alert{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 3rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: $box-background-primary;
+    opacity: 0;
+    // transition: opacity 2s ease-out;
+    animation: fadeinout 5s ease-out forwards;
+}
+
+.alert-success, .alert-danger, .alert-warning{
+    opacity: 1;
+}
+
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+@keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@include defineMessageType(alert-danger, $color-text-danger);
+@include defineMessageType(alert-success, $color-text-success);
+@include defineMessageType(alert-warning, $color-text-warning);

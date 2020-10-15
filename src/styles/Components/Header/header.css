@@ -1,0 +1,15 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+  width: 100vw;
+  background: linear-gradient(270deg, #00B4DB 0%, rgba(0, 131, 176, 0.97) 100%);
+  color: #FFFF;
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+.app-header:hover {
+  background: linear-gradient(90deg, #00B4DB 2%, rgba(0, 131, 176, 0.97) 100%);
+  transition: background 2s ease-in;
+}
+
+/*# sourceMappingURL=header.css.map */

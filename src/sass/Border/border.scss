@@ -1,0 +1,9 @@
+@mixin define-gradient-border($element, $width: 1px, $radius: 5px,$color-1: #00B4DB, $color2:#0083B0 , $color3: #830286) {
+    .#{$element}{
+        background: 
+        linear-gradient(#ffffff,#ffffff) padding-box, 
+        linear-gradient(90deg, $color-1 0.91%, $color2 40.44%, $color3 100%) border-box;
+        border: 1px solid transparent;
+        border-radius:$radius;
+    }
+}
