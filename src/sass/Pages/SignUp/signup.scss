@@ -1,0 +1,48 @@
+@import "../../config";
+@import "../../variables";
+
+.sign-up{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .app-header{
+        .go-back{
+            display: flex;
+            align-items: center;
+            padding:.3rem;
+
+            a{
+                color: $color-text-primary;
+                text-decoration: none;
+                transition: color 1s ease;
+
+                &:hover{
+                    color: $color-text-secondary;
+                }
+            }
+        }
+
+        .sign-up-description{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1{
+                font: 700 2rem Poppins;
+            }
+
+            p{
+                font: 600 1rem Poppins;
+                color: $color-text-secondary;
+            }
+        }
+    }
+
+    .form-group{
+        flex-grow: 1;
+    }
+}

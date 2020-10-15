@@ -1,0 +1,66 @@
+@use '../../Border//border.scss';
+@import '../../variables';
+@import './animations';
+
+%keyframe{
+    animation: fadeIn .4s ease-in;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: relative;
+    margin-bottom: .8rem;
+
+    label{
+        color: $color-label;
+        font: 600 .9rem Poppins;
+    }
+    @include border.define-gradient-border(app-input, $width: 1px);
+
+    .app-input{
+        width: 70vw;
+        height: 2.5rem;
+        padding: 0 .4rem;
+        font: 400 1rem Archivo;
+
+        &:focus{
+            outline: none;
+            border-width: 2px;
+        }
+
+        &:focus-within{
+            background-color: $input-background;
+        }
+    }
+
+    i{
+        position: absolute;
+        top: 2.3rem;
+        right: .5rem;
+        font-size: .8rem;
+        color: $color-icon;
+        opacity: 1;
+        cursor: pointer;
+        @extend %keyframe;
+    }
+
+    .error{
+        margin-top: .2rem;
+        color: $color-text-danger;
+        font: 500 .9rem Poppins;
+        @extend %keyframe;
+
+        min-width: 60vw;
+        max-width: 70vw;
+        opacity: 0;
+    }
+
+    @import './button';
+}
+
+@import './warning';
+@import './responsive';
+
+
