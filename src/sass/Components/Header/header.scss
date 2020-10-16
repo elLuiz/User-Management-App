@@ -8,6 +8,40 @@
     background: $background-gradient;
     color: $color-text-primary;
     border-radius: 0 0 .8rem .8rem;
+
+    .go-back{
+        display: flex;
+        align-items: center;
+        padding:.3rem;
+
+        a{
+            color: $color-text-primary;
+            text-decoration: none;
+            transition: color 1s ease;
+
+            &:hover{
+                color: $color-text-secondary;
+            }
+        }
+    }
+
+    .description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            font: 700 2rem Poppins;
+        }
+
+        p{
+            font: 600 1rem Poppins;
+            color: $color-text-secondary;
+        }
+    }
+    
+
     &:hover{
         background: linear-gradient(90deg, #00B4DB 2%, rgba(0, 131, 176, 0.97) 100%);
         transition: background 2s ease-in;

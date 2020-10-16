@@ -18,7 +18,7 @@ const InputPassword = ({name, label, placeholder, error, ...rest})=>{
 InputPassword.propTypes = {
     name: propTypes.string.isRequired,
     label: propTypes.string.isRequired,
-    placeholder: propTypes.string.isRequired,
+    placeholder: propTypes.string,
 }
 
 export default InputPassword;

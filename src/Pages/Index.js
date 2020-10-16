@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Denied from '../Components/Access/Denied';
 
 
 export class Index extends Component {
@@ -28,9 +29,7 @@ export class Index extends Component {
             )
         else
             return(
-                <div>
-                    <h1>Create account</h1>
-                </div>
+                <Denied />
             )
     }
 }

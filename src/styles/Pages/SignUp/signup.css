@@ -18,32 +18,6 @@ html, body, #root {
   flex-direction: column;
   align-items: center;
 }
-.sign-up .app-header .go-back {
-  display: flex;
-  align-items: center;
-  padding: 0.3rem;
-}
-.sign-up .app-header .go-back a {
-  color: #FFFF;
-  text-decoration: none;
-  transition: color 1s ease;
-}
-.sign-up .app-header .go-back a:hover {
-  color: #ECECEC;
-}
-.sign-up .app-header .sign-up-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.sign-up .app-header .sign-up-description h1 {
-  font: 700 2rem Poppins;
-}
-.sign-up .app-header .sign-up-description p {
-  font: 600 1rem Poppins;
-  color: #ECECEC;
-}
 .sign-up .form-group {
   flex-grow: 1;
 }

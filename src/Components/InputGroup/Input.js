@@ -16,7 +16,7 @@ const Input = ({name, label, placeholder,error, icon,...rest})=>{
 Input.propTypes = {
     name: propTypes.string.isRequired,
     label: propTypes.string.isRequired,
-    placeholder: propTypes.string.isRequired,
+    placeholder: propTypes.string,
     icon: propTypes.string,
 }
 

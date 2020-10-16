@@ -11,9 +11,9 @@ export default async function insertUser({name, email, password}){
     }catch(err){
         const  {response} = err
         if(response.status === 401){
-            console.log(response.data)
             if(response.data.err.code === "23505")
                 return {'error': 'The email is already in use.'}
         }
     }
 }
+
