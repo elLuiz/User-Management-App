@@ -7,6 +7,8 @@ const userController = new UserController();
 
 routes.get('/users', userController.getUsers);
 routes.post('/user/', userController.insertUser);
+routes.post('/user-login/', userController.loginUser);
+
 routes.put('/user/:id', userController.changeUserPassword);
 routes.delete('/user/:id', userController.deleteUser);
 routes.get('/checkCredentials', Auth, (req, res)=>{

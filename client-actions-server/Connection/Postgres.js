@@ -7,5 +7,4 @@ const postgres = new Pool({
     password: process.env.DB_CONFIG,
     port: 5432
 })
-
 module.exports = postgres
