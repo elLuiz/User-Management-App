@@ -1,5 +1,4 @@
-const jwt = require("jsonwebtoken");
-const {promisify} = require('util');
+const decodeToken = require('../Tokens/Token');
 
 const verifyCredentials = async (req, res, next)=>{
     const {token} = req.cookies
@@ -7,8 +6,7 @@ const verifyCredentials = async (req, res, next)=>{
         res.status(401).json({code: 1, err: 'No token provided.'})
     else{
         try{
-            const decoded = await promisify(jwt.verify)(token, process.env.SECRET)
-            console.log(decoded);
+            const decoded = await decodeToken(token)
             if(!decoded.userId)
              throw new Error
         

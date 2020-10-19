@@ -11,6 +11,7 @@ routes.post('/user-login/', userController.loginUser);
 
 routes.put('/user/:id', userController.changeUserPassword);
 routes.delete('/user/:id', userController.deleteUser);
+routes.get('/user', Auth, userController.getUser);
 routes.get('/checkCredentials', Auth, (req, res)=>{
     res.status(200).json({message: 'Connected'});
 })

@@ -1,7 +1,7 @@
-// require('dotenv').config();
 const postgres = require('../../Connection/Postgres');
 const jwt = require('jsonwebtoken');
 const bycrypt = require('bcrypt');
+const decodeToken = require('../../Tokens/Token');
 
 class UserController{
     getUsers = async (req, res)=>{
@@ -47,6 +47,21 @@ class UserController{
         }catch(err){
             return res.status(200).json(err)
         }
+    }
+
+    getUser = async (req, res)=>{
+        try{
+            const {userId} = await decodeToken(req.cookies.token)
+            const queryRes = await postgres.query('SELECT user_id, user_name, user_email from "financesapp".user_table where user_id=$1', [userId])
+
+            if(queryRes.rowCount === 0)
+                throw new Error('Could not find data related to this user.')
+            
+            return res.status(200).json(queryRes.rows[0])
+        }catch(err){
+            res.status(401).json({'error': err.message})
+        }
+
     }
 
     changeUserPassword = (req, res)=>{
