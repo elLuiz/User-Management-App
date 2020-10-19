@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  font: 600 1rem Poppins;
+}
+
+.user-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=user.css.map */

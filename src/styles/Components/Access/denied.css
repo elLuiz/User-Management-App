@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  font: 600 1rem Poppins;
+}
+
+.denied-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.denied-page .denied-icon {
+  width: 70vw;
+  height: 50vh;
+}
+.denied-page .error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.denied-page .error p {
+  text-align: center;
+  font: 500 1rem Poppins;
+}
+.denied-page .actions {
+  width: inherit;
+  display: flex;
+  justify-content: space-evenly;
+}
+.denied-page .actions .denied-page-button {
+  background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(90deg, #00B4DB 0.91%, #0083B0 40.44%, #830286 100%) border-box;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+.denied-page .actions .denied-page-button {
+  padding: 1rem;
+  width: 30vw;
+  text-align: center;
+  text-decoration: none;
+  font: 700 1rem Archivo;
+  transition: transform 1s ease, box-shadow 1s ease-in-out;
+}
+.denied-page .actions .denied-page-button:hover {
+  transform: scale(0.98);
+}
+.denied-page .actions #signup {
+  color: #39738B;
+}
+.denied-page .actions #login {
+  color: #FFFF;
+  box-shadow: 0px 2px 4px 0px rgba(0, 180, 219, 0.6);
+  background: #00B4DB !important;
+}
+
+@media (min-width: 1000px) {
+  .denied-page {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    align-content: center;
+    align-items: center;
+  }
+  .denied-page .image {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+  }
+  .denied-page .image #x-error {
+    animation: wiggle 2s ease-in-out;
+  }
+  .denied-page .error {
+    padding: 0 0.2rem;
+  }
+  .denied-page .error h1 {
+    font: 700 2rem Poppins !important;
+  }
+  .denied-page .actions a {
+    width: 20vw !important;
+  }
+}
+@keyframes wiggle {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75%, 100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes wiggle {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75%, 100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes wiggle {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75%, 100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=denied.css.map */

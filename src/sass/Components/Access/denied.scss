@@ -1,0 +1,64 @@
+@use '../../Border/border.scss';
+
+@import '../../variables';
+@import '../../config';
+
+.denied-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .denied-icon{
+        width: 70vw;
+        height: 50vh;
+    }
+
+    .error{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+        p{
+            text-align: center;
+            font: 500 1rem Poppins;
+        }
+    }
+
+    .actions{
+        width: inherit;
+        display: flex;
+        justify-content: space-evenly;
+        @include border.define-gradient-border('denied-page-button');
+
+        .denied-page-button{
+            padding: 1rem;
+            width: 30vw;
+            text-align: center;
+            text-decoration: none;
+            font: 700 1rem Archivo;
+            transition: transform 1s ease, box-shadow 1s ease-in-out;
+            &:hover{
+                transform: scale(0.98);
+            }
+
+
+        }
+
+        #signup{
+            color: $color-text-action-primary;
+        }
+
+        #login{
+            color: $color-text-primary;
+            box-shadow: 0px 2px 4px 0px transparentize($color: $border-color-1, $amount: 0.4);
+            background: $border-color-1 !important;
+        }
+        
+    }
+
+}
+
+@import './responsive';

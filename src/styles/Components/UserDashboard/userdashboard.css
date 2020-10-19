@@ -1,0 +1,22 @@
+.empty-dashboard {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-dashboard img {
+  width: 90vw;
+}
+.empty-dashboard p {
+  margin-top: 1rem;
+  font: 600 1rem Poppins;
+  color: #4e4e4e;
+}
+
+.empty-dashboard img {
+  width: 40vw;
+}
+
+/*# sourceMappingURL=userdashboard.css.map */

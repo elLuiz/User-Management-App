@@ -1,0 +1,10 @@
+@use '../PageLayout/page_layout';
+@import "../../config";
+@import "../../variables";
+
+.login{
+    @include page_layout.page();
+    .form-group{
+        flex-grow: 1;
+    }
+}

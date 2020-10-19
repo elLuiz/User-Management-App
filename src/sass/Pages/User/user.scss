@@ -1,0 +1,7 @@
+@use '../PageLayout/page_layout';
+@import "../../config";
+@import "../../variables";
+
+.user-page{
+    @include page_layout.page();
+}

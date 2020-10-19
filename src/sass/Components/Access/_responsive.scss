@@ -1,0 +1,76 @@
+@media(min-width:1000px){
+    .denied-page{
+        display: grid;
+        grid-template-columns: repeat(2, 50vw);
+        align-content:center;
+        align-items: center;
+    
+        .image{
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+
+            #x-error{
+                animation: wiggle 2s ease-in-out;
+            }
+        }
+        .error{
+            padding: 0 .2rem;
+            h1{
+                font: 700 2rem Poppins !important;
+            }
+        }    
+
+        .actions{
+            a{
+                width: 20vw !important;
+            }
+        }
+    }
+
+}
+
+@keyframes wiggle {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%, 100%{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes wiggle {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%, 100%{
+        opacity: 1;
+    }
+}
+
+@-o-keyframes wiggle {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%, 100%{
+        opacity: 1;
+    }
+}

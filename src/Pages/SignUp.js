@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import '../styles/Pages/SignUp/signup.css';
 import Header from '../Components/Header/Header';
-import { Link, Redirect } from 'react-router-dom';
 import FormGroup from '../Components/FormGroup/FormGroup';
 import Input from '../Components/InputGroup/Input';
 import InputPassword from '../Components/InputGroup/InputPassword';
@@ -39,8 +38,7 @@ export class SignUp extends Component {
     }
 
     // Validation functions
-    handleName=(name)=>{
-        
+    handleName=(name)=>{   
         if(validateName(name)){
             this.setState((prevState)=>({
                 userInput: {
@@ -56,7 +54,6 @@ export class SignUp extends Component {
     }
 
     handleEmail=(email)=>{
-        
         if(validateEmail(email)){
             this.setState((prevState)=>({
                 userInput: {
@@ -186,16 +183,7 @@ export class SignUp extends Component {
                     isVisible={this.state.alert.isAlertVisible}
                     setVisibility={this.setAlertVisibility}
                 />
-                <Header>
-                    <div className="go-back">
-                        <Link to="/"><i className="fas fa-chevron-left"></i></Link>
-                    </div>
-                    <div className="sign-up-description">
-                        <h1>SIGN UP</h1>   
-                        <p>Create an account and enjoy our app.</p>
-                    </div>
-                </Header>
-
+                <Header title="SIGN UP" subTitle="Create and account and enjoy." goback={true} />
                 <FormGroup>
                     <Input 
                         label="Name"

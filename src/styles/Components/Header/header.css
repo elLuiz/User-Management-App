@@ -7,6 +7,32 @@
   color: #FFFF;
   border-radius: 0 0 0.8rem 0.8rem;
 }
+.app-header .go-back {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+}
+.app-header .go-back a {
+  color: #FFFF;
+  text-decoration: none;
+  transition: color 1s ease;
+}
+.app-header .go-back a:hover {
+  color: #ECECEC;
+}
+.app-header .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app-header .description h1 {
+  font: 700 2rem Poppins;
+}
+.app-header .description p {
+  font: 600 1rem Poppins;
+  color: #ECECEC;
+}
 .app-header:hover {
   background: linear-gradient(90deg, #00B4DB 2%, rgba(0, 131, 176, 0.97) 100%);
   transition: background 2s ease-in;
