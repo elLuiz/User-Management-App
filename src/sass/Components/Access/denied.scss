@@ -39,11 +39,12 @@
             text-align: center;
             text-decoration: none;
             font: 700 1rem Archivo;
-            box-shadow: 0px 1px 2px $border-color-2;
-            transition: transform 1s ease;
+            transition: transform 1s ease, box-shadow 1s ease-in-out;
             &:hover{
                 transform: scale(0.98);
             }
+
+
         }
 
         #signup{
@@ -51,7 +52,8 @@
         }
 
         #login{
-            color: $color-text-secondary;
+            color: $color-text-primary;
+            box-shadow: 0px 2px 4px 0px transparentize($color: $border-color-1, $amount: 0.4);
             background: $border-color-1 !important;
         }
         

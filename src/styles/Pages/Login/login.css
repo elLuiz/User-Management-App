@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  font: 600 1rem Poppins;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login .form-group {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=login.css.map */

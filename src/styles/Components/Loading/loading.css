@@ -1,0 +1,29 @@
+.loading-container {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 40%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 3px solid #ECECEC;
+  border-top-color: #00B4DB;
+  animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=loading.css.map */

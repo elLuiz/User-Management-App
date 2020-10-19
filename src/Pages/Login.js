@@ -4,9 +4,11 @@ import FormGroup from '../Components/FormGroup/FormGroup'
 import Input from '../Components/InputGroup/Input'
 import Button from '../Components/InputGroup/Button'
 import InputPassword from '../Components/InputGroup/InputPassword'
+import InputWarning from '../Components/InputGroup/InputWarning';
 import { validateEmail, validatePassword } from '../Functions/FormValidation'
 import  verifyUserCredentials  from '../API/LogInUser'
 
+import '../styles/Pages/Login/login.css'
 export class Login extends Component {
     constructor(props){
         super(props)
@@ -18,8 +20,7 @@ export class Login extends Component {
             errors: {
                 email: '',
                 password: ''
-            },
-            isSendable: false
+            }
         }
     }
 
@@ -92,14 +93,24 @@ export class Login extends Component {
             const result = await verifyUserCredentials({email, password})
             console.log(result)
             if(result.success)
-                console.log('lo')
+                this.startTimeout = setTimeout(()=>{
+                    this.props.history.push('/')
+                }, 1000)
             else if(result.user)
                 this.createErrorMessage('email', result.user)
             else 
                 this.createErrorMessage('password', result.password)
         }else{
-            console.log('FFFFFFFFFF')
+            if(email.length === 0)
+                this.createErrorMessage('email', 'This field is required.')
+            
+            if(password.length === 0)
+                this.createErrorMessage('password', 'The password field is required.')
         }
+    }
+
+    setVisibility = ()=>{
+        this.setState({alert: !this.state.alert.isAlertVisible})
     }
 
     render() {
@@ -122,7 +133,14 @@ export class Login extends Component {
                         error={this.state.errors.password}
                         required
                     />
-                    <Button message="Log In" type="submit" onClick={(e)=>this.sendUserData(e)}/>
+                    <InputWarning
+                        message="All fields are required. Please fill them out."
+                    />
+                    <Button 
+                        message="Log In" 
+                        type="submit" 
+                        onClick={(e)=>this.sendUserData(e)}
+                    />
                 </FormGroup>
             </div>
         )

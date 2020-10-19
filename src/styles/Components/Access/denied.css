@@ -49,8 +49,7 @@ html, body, #root {
   text-align: center;
   text-decoration: none;
   font: 700 1rem Archivo;
-  box-shadow: 0px 1px 2px #0083B0;
-  transition: transform 1s ease;
+  transition: transform 1s ease, box-shadow 1s ease-in-out;
 }
 .denied-page .actions .denied-page-button:hover {
   transform: scale(0.98);
@@ -59,7 +58,8 @@ html, body, #root {
   color: #39738B;
 }
 .denied-page .actions #login {
-  color: #ECECEC;
+  color: #FFFF;
+  box-shadow: 0px 2px 4px 0px rgba(0, 180, 219, 0.6);
   background: #00B4DB !important;
 }
 

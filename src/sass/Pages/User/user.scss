@@ -2,9 +2,6 @@
 @import "../../config";
 @import "../../variables";
 
-.sign-up{
+.user-page{
     @include page_layout.page();
-    .form-group{
-        flex-grow: 1;
-    }
 }

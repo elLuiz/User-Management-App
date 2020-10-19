@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Denied from '../Components/Access/Denied';
+import Dashboard from './Dashboard';
 
 
 export class Index extends Component {
@@ -23,9 +24,7 @@ export class Index extends Component {
         const {isUserLogged} = this.state;
         if(isUserLogged)
             return (
-                <div>
-                    <h1>Welcome back, user</h1>
-                </div>
+                <Dashboard />
             )
         else
             return(
