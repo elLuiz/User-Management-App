@@ -1,0 +1,116 @@
+@import '../../variables';
+
+.user-configuration{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    .screen-description{
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        .welcome{
+            font: 600 1.5rem Poppins;
+            line-height: 2rem;
+        }
+        .description{
+            font: 500 1rem Poppins;
+        }
+    }
+
+    .user-options{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow-x: auto;
+        margin-bottom: 1rem;
+        .option{
+            background: none;
+            border: 0;
+            margin-right: 1rem;
+            cursor: pointer;
+            font: 500 1rem Archivo;
+            i{
+                display: none;
+            }
+            &:hover{
+                border-bottom: 2px solid $border-color-1;
+            }
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        .active{
+            font-weight: 600;
+            color: $border-color-2;
+            border-bottom: 2px solid $border-color-1;
+        }
+    }
+
+
+    .user-data-container{
+        width: 100%;
+        height: fit-content;
+        max-height: 80%;
+        overflow-y: auto;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px transparentize($color: $border-color-4, $amount: .4);
+
+        display: flex;
+        flex-direction: column;
+        .header{
+            padding: 0 0.5rem;
+        
+            h1{
+                font: 500 1.5rem Poppins;
+            }
+        }
+
+        .user-data{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+
+            .data{
+                padding:.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid $border-bottom-color;
+                margin-bottom: .2rem;
+                &:hover{
+                    background-color: darken($color: #ffffff, $amount: 5%);
+                    cursor: pointer;
+                }
+                .data-group{
+                    .label{
+                        font: 600 .8rem Archivo;
+                        color: $color-text-secondary;
+                    }
+                }
+
+                &:last-child{
+                    border-radius: 0 0 10px 10px;
+                    border: 0;
+                }
+            }
+
+
+
+
+        }
+    }
+
+}
+
+@import './responsive';

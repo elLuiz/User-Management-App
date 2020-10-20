@@ -18,7 +18,7 @@ export class UserDataContainer extends Component {
             this.setState({
                 user: response.data,
                 loading: false
-            }, ()=>{console.log(this.state)})
+            })
         
     }
     render() {

@@ -1,0 +1,142 @@
+.user-configuration {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.user-configuration .screen-description {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.user-configuration .screen-description .welcome {
+  font: 600 1.5rem Poppins;
+  line-height: 2rem;
+}
+.user-configuration .screen-description .description {
+  font: 500 1rem Poppins;
+}
+.user-configuration .user-options {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.user-configuration .user-options .option {
+  background: none;
+  border: 0;
+  margin-right: 1rem;
+  cursor: pointer;
+  font: 500 1rem Archivo;
+}
+.user-configuration .user-options .option i {
+  display: none;
+}
+.user-configuration .user-options .option:hover {
+  border-bottom: 2px solid #00B4DB;
+}
+.user-configuration .user-options .option:focus {
+  outline: none;
+}
+.user-configuration .user-options .active {
+  font-weight: 600;
+  color: #0083B0;
+  border-bottom: 2px solid #00B4DB;
+}
+.user-configuration .user-data-container {
+  width: 100%;
+  height: fit-content;
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(118, 118, 118, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+.user-configuration .user-data-container .header {
+  padding: 0 0.5rem;
+}
+.user-configuration .user-data-container .header h1 {
+  font: 500 1.5rem Poppins;
+}
+.user-configuration .user-data-container .user-data {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.user-configuration .user-data-container .user-data .data {
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: 0.2rem;
+}
+.user-configuration .user-data-container .user-data .data:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+.user-configuration .user-data-container .user-data .data .data-group .label {
+  font: 600 0.8rem Archivo;
+  color: #9C9C9C;
+}
+.user-configuration .user-data-container .user-data .data:last-child {
+  border-radius: 0 0 10px 10px;
+  border: 0;
+}
+
+@media (min-width: 1000px) {
+  .user-configuration {
+    display: grid;
+    grid-template-columns: repeat(3, 25vw);
+    align-items: unset;
+    justify-content: center;
+  }
+  .user-configuration .screen-description {
+    width: 100%;
+    grid-column: 1/4;
+  }
+  .user-configuration .user-options {
+    grid-row: 2/3;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .user-configuration .user-options .option {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    width: 90%;
+    margin: 0 0 2rem 0;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  .user-configuration .user-options .option:hover {
+    border-radius: 5px;
+    border-bottom: 0 !important;
+    background-color: #a8f0ff;
+  }
+  .user-configuration .user-options .option i {
+    display: block;
+    margin-right: 1rem;
+  }
+  .user-configuration .user-options .active {
+    border-bottom: 0 !important;
+    background-color: #a8f0ff;
+    border-radius: 10px;
+  }
+  .user-configuration .user-data-container {
+    grid-column: 2/4;
+  }
+}
+
+/*# sourceMappingURL=userdata.css.map */
