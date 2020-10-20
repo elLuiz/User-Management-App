@@ -52,7 +52,7 @@ class UserController{
     getUser = async (req, res)=>{
         try{
             const {userId} = await decodeToken(req.cookies.token)
-            const queryRes = await postgres.query('SELECT user_id, user_name, user_email from "financesapp".user_table where user_id=$1', [userId])
+            const queryRes = await postgres.query('SELECT user_id, user_name, user_email, account_created_at from "financesapp".user_table where user_id=$1', [userId])
 
             if(queryRes.rowCount === 0)
                 throw new Error('Could not find data related to this user.')
