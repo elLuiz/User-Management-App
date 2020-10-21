@@ -35,6 +35,7 @@
   margin-right: 1rem;
   cursor: pointer;
   font: 500 1rem Archivo;
+  transform: scale(0.95);
 }
 .user-configuration .user-options .option i {
   display: none;
@@ -49,6 +50,7 @@
   font-weight: 600;
   color: #0083B0;
   border-bottom: 2px solid #00B4DB;
+  transform: scale(1);
 }
 .user-configuration .user-data-container {
   width: 100%;
@@ -92,6 +94,52 @@
   border-radius: 0 0 10px 10px;
   border: 0;
 }
+.user-configuration .user-data-container .user-option {
+  padding: 1rem;
+}
+.user-configuration .user-data-container .user-option .user-action-description h2 {
+  font: 500 1.2rem Poppins;
+}
+.user-configuration .user-data-container .user-option .user-action-description p {
+  font: 400 0.8rem Poppins;
+}
+.user-configuration .user-data-container .user-option .user-action-button .btn {
+  font: 500 1rem Archivo;
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  transform: scale(0.99);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.user-configuration .user-data-container .user-option .user-action-button .btn-danger {
+  background: #ffffff;
+  border: 1px solid #d81111;
+  box-shadow: 0px 1px 2px #d81111;
+  transition: background 1s ease-in-out;
+}
+.user-configuration .user-data-container .user-option .user-action-button .btn-danger:hover {
+  background-color: #d81111;
+  color: #EDEDED;
+}
+.user-configuration .user-data-container .user-option .user-action-button .btn-danger:focus {
+  outline: none;
+  box-shadow: 0px 1px 5px rgba(216, 17, 17, 0.4);
+}
+.user-configuration .user-data-container .user-option .user-action-button .btn-log-out {
+  background: #ffffff;
+  border: 1px solid #00B4DB;
+  box-shadow: 0px 1px 2px #00B4DB;
+  transition: background 1s ease-in-out;
+}
+.user-configuration .user-data-container .user-option .user-action-button .btn-log-out:hover {
+  background-color: #00B4DB;
+  color: #EDEDED;
+}
+.user-configuration .user-data-container .user-option .user-action-button .btn-log-out:focus {
+  outline: none;
+  box-shadow: 0px 1px 5px rgba(0, 180, 219, 0.4);
+}
 
 @media (min-width: 1000px) {
   .user-configuration {
@@ -132,7 +180,7 @@
   .user-configuration .user-options .active {
     border-bottom: 0 !important;
     background-color: #a8f0ff;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   .user-configuration .user-data-container {
     grid-column: 2/4;

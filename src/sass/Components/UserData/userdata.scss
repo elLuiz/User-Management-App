@@ -1,5 +1,24 @@
 @import '../../variables';
 
+@mixin btn($class, $color) {
+    .#{$class}{
+        background: #ffffff;
+        border:1px solid $color;
+        box-shadow: 0px 1px 2px $color;
+        transition: background 1s ease-in-out;
+        &:hover{
+            background-color: $color;
+            color: $color-text-secondary;
+        }
+
+        &:focus{
+            outline: none;
+            box-shadow: 0px 1px 5px rgba($color: $color, $alpha: .4);
+        }
+    }
+
+}
+
 .user-configuration{
     width: 100vw;
     height: 90vh;
@@ -31,12 +50,14 @@
         justify-content: space-evenly;
         overflow-x: auto;
         margin-bottom: 1rem;
+        
         .option{
             background: none;
             border: 0;
             margin-right: 1rem;
             cursor: pointer;
             font: 500 1rem Archivo;
+            transform: scale(0.95);
             i{
                 display: none;
             }
@@ -53,6 +74,7 @@
             font-weight: 600;
             color: $border-color-2;
             border-bottom: 2px solid $border-color-1;
+            transform: scale(1);
         }
     }
 
@@ -95,7 +117,7 @@
                 .data-group{
                     .label{
                         font: 600 .8rem Archivo;
-                        color: $color-text-secondary;
+                        color: $color-text-option;
                     }
                 }
 
@@ -104,10 +126,33 @@
                     border: 0;
                 }
             }
+        }
 
+        .user-option{
+            padding: 1rem;
+            .user-action-description{
+                h2{
+                    font: 500 1.2rem Poppins;
+                }
+                p{
+                    font: 400 .8rem Poppins;
+                }
+            }
 
+            .user-action-button{
+                .btn{
+                    font: 500 1rem Archivo;
+                    width: 10rem;
+                    height: 2rem;
+                    border: none;
+                    transform: scale(0.99);
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
 
-
+                @include btn(btn-danger, $color-text-danger);
+                @include btn(btn-log-out, $border-color-1);
+            }
         }
     }
 

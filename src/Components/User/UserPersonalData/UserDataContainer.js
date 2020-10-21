@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import getUser from '../../API/GetUser';
+import getUser from '../../../API/GetUser';
 import UserData from './UserData';
-import Loading from '../Loading/Loading';
+import Loading from '../../Loading/Loading';
 
 export class UserDataContainer extends Component {
     constructor(props){
@@ -21,6 +21,7 @@ export class UserDataContainer extends Component {
             })
         
     }
+
     render() {
         const {loading, user} = this.state
         if(loading)

@@ -35,10 +35,10 @@
 }
 .alert-danger {
   font: 700 1rem Archivo;
-  color: #A40101;
+  color: #d81111;
 }
 .alert-danger:not(p) {
-  box-shadow: 0px 2px 2px 1px rgba(164, 1, 1, 0.6);
+  box-shadow: 0px 2px 2px 1px rgba(216, 17, 17, 0.6);
 }
 
 .alert-success {
