@@ -7,7 +7,7 @@ export class User extends Component {
     render() {
         return (
             <div className="user-page">
-                <Nav path="/" icon="fas fa-home"/>
+                <Nav/>
                 <UserContainer />
             </div>
         )

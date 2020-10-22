@@ -64,41 +64,6 @@ class UserController{
 
     }
 
-    changeUserPassword = (req, res)=>{
-        const id = parseInt(req.params.id);
-        const {password} = req.body;
-        postgres.query("SET SEARCH_PATH to financesapp", (error, result)=>{
-            if(error)
-                return res.status(401).json(error)
-    
-            postgres.query("UPDATE user_table SET user_password=$1 where user_id=$2", [password, id], (err, result)=>{
-                if(err)
-                    return res.status(401).json(err)
-    
-                return res.status(200).json({message: "You password has been changed"})
-            })
-        })
-    }
-    
-    deleteUser = (req, res)=>{
-        const id  = parseInt(req.params.id);
-        postgres.query("SET search_path to financesapp", (error, result)=>{
-       
-            if(error)
-                return res.status(401).json(error)
-            
-            postgres.query("DELETE from user_table WHERE user_id=$1", [id], (err, result)=>{
-                if(err)
-                    return res.status(403).json(err)
-                
-                if(result.rowCount == 0)
-                    return res.status(401).json({message: "User not found."})
-                else 
-                    return res.status(200).json({message: "User deleted."})
-            })  
-        })
-    }
-
     comparePasswords = async (dbPassword, postPassword)=>{
         return await bycrypt.compare(postPassword, dbPassword);
     }

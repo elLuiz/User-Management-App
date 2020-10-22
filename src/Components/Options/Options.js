@@ -6,9 +6,7 @@ export default class Options extends React.PureComponent{
         super(props)
         this.state={
             links: [
-                {label: 'Personal Info', icon: 'far fa-id-card'},
-                {label: 'Security', icon: 'fas fa-fingerprint'}
-
+                {label: 'Personal Info', icon: 'far fa-id-card'}
             ]
         }
     }   

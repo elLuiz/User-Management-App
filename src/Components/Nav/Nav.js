@@ -12,17 +12,19 @@ const Nav = ({path, icon})=>{
                 <img src={Logo} alt="Logo" />                
             </div>
             <div className="nav-item flex-end">
-                <Link to={path}>
-                    <i className={icon}></i>
-                </Link>
+                {path &&
+                    <Link to={path}>
+                        <i className={icon}></i>
+                    </Link>
+                }
             </div>
         </nav>
     )
 }
 
 Nav.propTypes = {
-    path: propTypes.string.isRequired,
-    icon: propTypes.string
+    path: propTypes.string,
+    icon: propTypes.string,
 }
 
 Nav.defaultProps = {
