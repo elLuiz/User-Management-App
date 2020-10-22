@@ -1,6 +1,6 @@
 ## Motivation
 
-This project was created to improve my skills in React and NodeJS. As well as having a better understanding of Authentication.
+This project was intended to improve my skills in React and NodeJS. As well as having a better understanding of Authentication.
 
 ### Authentication
 
