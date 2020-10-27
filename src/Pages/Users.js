@@ -4,7 +4,7 @@ export class Users extends Component {
     render() {
         return (
             <div>
-                <h1>Cu</h1>  
+                <h1>TODO</h1>  
             </div>
         )
     }
