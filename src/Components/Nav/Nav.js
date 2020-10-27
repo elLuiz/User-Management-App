@@ -5,26 +5,23 @@ import { Link } from 'react-router-dom';
 
 import '../../styles/Components/Nav/nav.css';
 
-const Nav = ({path, icon})=>{
+const Nav = ({children})=>{
     return (
         <nav className="navbar">
             <div className="nav-item">
-                <img src={Logo} alt="Logo" />                
+                <Link to="/">
+                    <img src={Logo} alt="Logo" />                
+                </Link>
             </div>
-            <div className="nav-item flex-end">
-                {path &&
-                    <Link to={path}>
-                        <i className={icon}></i>
-                    </Link>
-                }
+            <div className="nav-links">
+                {children && children}
             </div>
         </nav>
     )
 }
 
 Nav.propTypes = {
-    path: propTypes.string,
-    icon: propTypes.string,
+    children: propTypes.node
 }
 
 Nav.defaultProps = {

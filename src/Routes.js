@@ -4,6 +4,7 @@ import SignUp from './Pages/SignUp';
 import Index from './Pages/Index';
 import Login from './Pages/Login';
 import User from './Pages/User';
+import Users from './Pages/Users';
 
 export default function Routes() {
     return (
@@ -12,6 +13,7 @@ export default function Routes() {
             <Route path="/signup" component={SignUp} />
             <Route path="/login" component={Login} />
             <Route path="/user" component={User} />
+            <Route path="/users" component={Users} />
         </Router>
     )
 }
