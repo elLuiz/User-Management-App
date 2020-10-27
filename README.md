@@ -25,7 +25,7 @@ After creating this file, you're ready to run. To run properly, first start the 
 * Sass
 * PostgreSQL
 ### Preview
-Index page(User does not have created a token yet.)
+Index page(User have not created a token yet.)
 ![Alt text](screenshots/index.png?raw=true "Index")
 
 Log In
