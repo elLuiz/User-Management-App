@@ -13,7 +13,7 @@ DB_CONFIG=YOUR_PASSWORD
 SECRET=YOUR_SECRET
 ### Creating .env file
 If you are using a Linux OS execute the following commands: <br />
-`touch >> .env` <br />
+`touch .env` <br />
 `gedit .env`
 
 After creating this file, you're ready to run. To run properly, first start the server with `npm run server`; second, initiliaze the React app with `npm start`.
